@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>New Tab</title>
+	<title>Dashboard</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
     <meta name="description" content="fullPage full-screen background videos." />
     <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,video,full-screen" />
@@ -66,6 +66,25 @@
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 	}
+	.layer2{
+		position: absolute;
+		z-index: 4;
+		width: 400px;
+		right: 5%;
+		bottom: 5%;
+
+		/*
+
+		* Preventing flicker on some browsers
+
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+
+		*/
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+
+		transform: translate3d(0,0,0);
+	}
 
 	/*solves problem with overflowing video in Mac with Chrome */
 	#section0{
@@ -104,10 +123,15 @@
 			<source src="imgs/rain.mp4" type="video/mp4">
 		</video>
 		<div class="layer">
-			<iframe src="https://free.timeanddate.com/clock/i8tpmhez/n312/fn6/fs48/fcfff/tct/pct/ftb/tt0/tw1/tm1/th1/ts1/ta1/tb4" frameborder="0" width="440" height="136" allowtransparency="true"></iframe>
-			<!---
-			<h1>fullPage.js videos</h1>
-			<p>Don't forget to add "playsinline" attribute to make it work on phones</p>--->
+			<iframe src="https://free.timeanddate.com/clock/i8tpmhez/n312/fn6/fs48/fcfff/tct/pct/ftb/tt0/tw1/tm1/th1/ts1/ta1/tb4" frameborder="0" width="600" height="200" allowtransparency="true"></iframe>
+		</div>
+		<div class="layer2">
+			<a class="weatherwidget-io" href="https://forecast7.com/en/50d747d10/bonn/" data-label_1="BONN" data-label_2="Germany" data-font="Ubuntu" data-icons="Climacons Animated" data-days="3" data-theme="original" 
+			data-basecolor="rgba(31, 86, 124, 0)" >BONN Germany</a>
+      <script>
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+      fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+      </script>
 		</div>
 	</div>
 
